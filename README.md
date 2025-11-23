@@ -3,7 +3,8 @@
 This repository contains code, input data, and figures used in the manuscript  
 **“Differential conservation analysis identifies residues defining constitutive internalization in beta‑adrenergic receptors”** .
 
-There are two main components:
+There are three main components:
+- Ortholog multiple sequence alignment (MSA) for calculating residue conservation within β-adrenergic receptor subtypes.
 - Structural visualization of the TM1/TM7/H8 dimer interface (Figure 1B), which is **independent of RRCS**.
 - Quantitative analysis of dimerization interface contacts from MD simulations using the **residue–residue contact score (RRCS)** algorithm of Zhou and co‑workers, implemented following Jones *et al.*, eLife 2020 [https://doi.org/10.7554/eLife.54895](https://doi.org/10.7554/eLife.54895).
 
