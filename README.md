@@ -7,6 +7,37 @@ There are two main components:
 - Structural visualization of the TM1/TM7/H8 dimer interface (Figure 1B), which is **independent of RRCS**.
 - Quantitative analysis of dimerization interface contacts from MD simulations using the **residue–residue contact score (RRCS)** algorithm of Zhou and co‑workers, implemented following Jones *et al.*, eLife 2020 [https://doi.org/10.7554/eLife.54895](https://doi.org/10.7554/eLife.54895).
 
+### Ortholog Multiple Sequence Alignment (MSA)
+
+- **`BAR_orthologs_MSA.fasta`**  
+  - Multiple sequence alignment of β-adrenergic receptor orthologs used to calculate residue conservation within orthologs of each β-adrenergic receptor subtype.  
+  - The file is organized in a structured format where:
+    - **Human sequences** (ADRB1_HUMAN, ADRB2_HUMAN, ADRB3_HUMAN) appear first for each subtype
+    - **Ortholog sequences** from other species immediately follow each human sequence
+    - This pattern repeats for all three β-adrenergic receptor subtypes (β₁AR, β₂AR, β₃AR)
+
+#### Example structure of the fasta file:
+
+```
+>sp|P08588|ADRB1_HUMAN|9606/1-477          # Human β₁AR
+[alignment sequence...]
+>tr|G3SE09|G3SE09_GORGO|9595/1-291         # Gorilla β₁AR ortholog
+[alignment sequence...]
+>tr|...|..._PANTR|...                       # Chimpanzee β₁AR ortholog
+[alignment sequence...]
+[... additional β₁AR orthologs ...]
+
+>sp|P07550|ADRB2_HUMAN|9606/1-413          # Human β₂AR
+[alignment sequence...]
+[... β₂AR orthologs ...]
+
+>sp|P13945|ADRB3_HUMAN|9606/1-408          # Human β₃AR
+[alignment sequence...]
+[... β₃AR orthologs ...]
+```
+
+This organization enables subtype-specific conservation analysis by grouping each human receptor with its respective orthologs.
+
 ### Structural visualization for Figure 1B (independent of RRCS)
 
 - **`structural_visualization_adrb1_turkey.pse`**  
